@@ -1,4 +1,4 @@
-#include "Person.h"
+#include "Capybara.h"
 
 int main()
 
@@ -12,13 +12,13 @@ m1.setAge(23);
 
 m2.setName("Alan");
 
-m2.setAge(34);x
+m2.setAge(34);
 
 m3.setName("Alice");
 
 m3.setAge(19);
 
-m4.setName("Matt");
+m4.setName("Capy");
 
 m4.setAge(29);
 

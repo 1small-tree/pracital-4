@@ -1,4 +1,4 @@
-#include "Person.h"
+#include "Capybara.h"
 
 int main()
 
@@ -22,13 +22,13 @@ m4.setName("Capy");
 
 m4.setAge(29);
 
-Person p1("Harry", 4399);
+Capybara p1("Harry", 4399);
 
-Person p2("Naomi", 2300);
+Capybara p2("Naomi", 2300);
 
-Person p3("Paolo", 1900);
+Capybara p3("Paolo", 1900);
 
-Person p4("Garry", 5300);
+Capybara p4("Garry", 5300);
 
 cout << endl << "*** DETAILS OF ALL MEERKATS ***\n-------------------------------" << endl;
 
