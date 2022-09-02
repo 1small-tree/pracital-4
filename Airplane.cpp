@@ -1,57 +1,40 @@
-#include <iostream> 
+#include <iostream>
+using std::cout;
+using std::endl;
 
-using namespace std; 
+#include <string>
+using std::string;
 
-class Person {
+#include "Person.h"
+#include "Airplane.h"
 
-private:
+// a pilot and copilot must be provided when creating an airplane
+Airplane::Airplane(string theCallsign, Person thePilot, Person theCoPilot) : callsign(theCallsign), pilot(thePilot), coPilot(theCoPilot) {}
 
-string firstName,lastName; public: Person()//default constructor
-
+// change the pilot
+void Airplane::setPilot(Person thePilot)
 {
-
-firstName = lastName = 
-
+    pilot = thePilot;
+}
+Person Airplane::getPilot()
+{
+    return pilot;
 }
 
-Person(string firstName,string lastName)//argument constructor
-
-this->firstName = firstName; this->lastName = lastName;
-
+// change the co-pilot
+void Airplane::setCoPilot(Person theCoPilot)
+{
+    coPilot = theCoPilot;
+}
+Person Airplane::getCoPilot()
+{
+    return coPilot;
 }
 
-person(person &p)//copy constructor
-
+// print the callsign, a new line, the pilot name, a new line, the co-pilot name and a final newline.
+void Airplane::printDetails()
 {
-
-firstName = p.firstName;
-
-lastName = p.lastName; }
-
-//set and get methods
-
-void setFirstName(string firstName)
-
-} this->firstName = firstName;
-
- string getFirstName()
-
-{ return firstName;
-
-} void setLastName(string lastName)
-
-{ this->lastName = lastName;
-
-} string getLastName()
-
-return lastName;
-
-} //operator overloading function for = void operator =(person p)
-
-{
-
-this->firstName = p.firstName;
-
-this->lastName = p.lastName;
-
-};
+    cout << callsign << endl;
+    cout << pilot.getName() << endl;
+    cout << coPilot.getName() << endl;
+}

@@ -1,45 +1,32 @@
-#include <iostream>
+#ifndef AIRPLANE_H
+#define AIRPLANE_H
 
-using namespace std;
+#include <string>
+using std::string;
 
-class aircraft
+#include "Person.h"
 
+class Airplane
 {
+protected:
+    string callsign;
+    Person pilot;
+    Person coPilot;
 
-private:
+public:
+    // a pilot and copilot must be provided when creating an airplane
+    Airplane(string theCallsign, Person thePilot, Person theCoPilot);
 
-string callsign;
+    // change the pilot
+    void setPilot(Person thePilot);
+    Person getPilot();
 
-person the Pilot,theCoPilot;
+    // change the co-pilot
+    void setCoPilot(Person theCoPilot);
+    Person getCoPilot();
 
-public: aircraft(string callsign,person the Pilot,person theCoPilot)//argument constructor
+    // print the callsign, a new line, the pilot name, a new line, the co-pilot name and a final newline.
+    void printDetails();
+};
 
-this->callsign callsign; =
-
-this->thePilot = thePilot;
-
-this->theCoPilot = theCoPilot;
-
-}
-
-//set and get methods
-
-void setPilot(person thePilot)
-
-} this->thePilot = thePilot;
-
-} person getPilot()
-
-{ return thePilot;
-
-} void setCoPilot(person theCoPilot)
-
-{ this->theCoPilot = theCoPilot;
-
-}
-
-person getCoPilot()
-
-{
-
-return theCoPilot;
+#endif
