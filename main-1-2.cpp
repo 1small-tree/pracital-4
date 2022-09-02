@@ -4,7 +4,7 @@ int main()
 
 {
 
-Meerkat m1, m2, m3, m4;
+Capybara m1, m2, m3, m4;
 
 m1.setName("Jode");
 
