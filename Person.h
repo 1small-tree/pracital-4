@@ -1,31 +1,26 @@
-#include <iostream>
+#ifndef PERSON_H
+#define PERSON_H
 
-#include <sstream>
-
-using namespace std;
+#include <string>
+using std::string;
 
 class Person
-
 {
-
-private:
-
-string myName;
-
-int salary;
+protected:
+    int salary;
+    string name;
 
 public:
+    // a name and salary must be provided to create a Person
+    Person(int mySalary, string myName);
+    
+    // change the Person's name
+    void setName(string myName);
+    string getName();
 
-Person();
-
-string getName();
-
-void setName(string);
-
-int getSalary();
-
-void setSalary(int);
-
-string toString();
-
+    // change the Person's salary
+    void setSalary(int mySalary); 
+    int getSalary();
 };
+
+#endif

@@ -1,20 +1,29 @@
-#include <iostream>
-using namespace std;
+#ifndef WAGON_H
+#define WAGON_H
 
-// a class to represent capybara
-class Capybara
+#include <vector>
+using std::vector;
+
+#include "Capybara.h"
+
+class Wagon
 {
-private:
-    // variable to store the  name and the age of the capybara
-    string name;
-    int age;
+protected:
+    vector<Capybara> users;
 
 public:
-    Capybara();
-    Capybara(string name, int age);
+    // create an empty wagon object
+    Wagon();                            
 
-    // getters functions
-    string getName();
-    int getAge();
+    // adds a Capybara to the wagon, returns false if full
+    bool addCapybara(Capybara newCapy); 
+
+    // remove all Capybaras from the wagon
+    void emptyWagon();
+
+    // print the name, a space, the age, then a new line
+    // for each capybara in the order they were added
+    void printCapybaras();
 };
 
+#endif

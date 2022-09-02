@@ -1,49 +1,44 @@
+#include <iostream>
+#include <vector>
+#include <stdlib.h>
 #include "Person.h"
+using namespace std;
 
-int main()
+vector<Person> stuff;
 
+
+int main(void)
 {
+    Person person1(10000, "Person 1");
+    Person person2(20000, "Person 2");
+    Person person3(30000, "Person 3");
+    Person person4(40000, "Person 4");
 
-Person m1,m2,m3,m4;
+    stuff.push_back(person1);
+    stuff.push_back(person2);
+    stuff.push_back(person3);
+    stuff.push_back(person4);
 
-cout <<"before setting name: " << m1.getName() <<endl;
+    for (Person &a : stuff)
+    {
+        cout << "'" << a.getName() << "' has " << a.getSalary() << " as a salary" << endl;
+    }
 
-m1.setName("test");
 
-cout <<"after setting name: " << m1.getName() <<endl;
+    stuff[0].setName("Peter");
+    stuff[1].setName("Jack");
+    stuff[2].setName("Seven");
+    stuff[3].setName("Ariel");
 
-cout <<"before setting age: " << m1.getAge() <<endl;
+    for (Person &a : stuff)
+    {
+        a.setSalary(a.getSalary() + rand() % 10000 - 5000 + 1);
+    }
 
-m1.setAge(23);
+    for (Person &a : stuff)
+    {
+        cout << "'" << a.getName() << "' has " << a.getSalary() << " as a salary" << endl;
+    }
 
-cout <<"after setting age: " << m1.getAge() <<endl;
-
-//before setting there may be a garbage value in it...
-
-cout << "before setting m2 " << m2.getName() <<" " << m2.getAge() << endl;
-
-m2.setName("test2");
-
-m2.setAge(22);
-
-cout << "after setting m2 " << m2.getName() <<" " << m2.getAge() << endl;
-
-cout << "before setting m3 " << m3.getName() <<" " << m3.getAge() << endl;
-
-m3.setName("test3");
-
-m3.setAge(21);
-
-cout << "after setting m3 " << m3.getName() <<" " << m3.getAge() << endl;
-
-cout << "before setting m4 " << m4.getName() <<" " << m4.getAge() << endl;
-
-m4.setName("test4");
-
-m4.setAge(32);
-
-cout << "after setting m4 " << m4.getName() <<" " << m4.getAge() << endl;
-
-return 1;
-
+    return 0;
 }
