@@ -1,14 +1,10 @@
 #include "Capybara.h"
+#include <vector>
+#include <iostream>
 
-class Person
+using namespace std;
 
-{
-
-private:
-
-string myName;
-
-int salary;
+class Person{   
 
 public:
 
@@ -23,6 +19,14 @@ void setSalary(int);
 int getSalary();
 
 string toString();
+
+private:
+
+private:
+
+string myName;
+
+int salary;
 
 };
 
