@@ -1,24 +1,31 @@
 #include "Person.h"
 
-Person::Person(string myName,int Salary){
-    this->name = myName;
-    this->salary = Salary;
-}
- 
-void Person::setName(string myName){
-    this->name = myName;
+Person::Person(string name, int salary)
+
+{
+
+this->myName = name;
+
+this->salary = salary;
+
 }
 
-string Person::getName(){
-    return this->name;
-}
+void Person::setName(string name){ this->myName = name; }
 
-void Person::getSalary(){
-    this->salary = mySalary;
-}
+string Person::getName(){ return this->myName; }
 
-int Person::getSalary(){
-    return this->salary;
-}
+void Person::setSalary(int salary){ this->salary = salary; }
 
-Person::Person() = default;
+int Person::getSalary(){ return this->salary; }
+
+string Person::toString()
+
+{
+
+stringstream ss;
+
+ss << "Name: " << getName() << ", Salary: $" << getSalary();
+
+return ss.str();
+
+}
