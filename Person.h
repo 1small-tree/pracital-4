@@ -1,4 +1,8 @@
-#include "Capybara.h"
+#include <iostream>
+
+#include <sstream>
+
+using namespace std;
 
 class Person
 
@@ -12,15 +16,15 @@ int salary;
 
 public:
 
-Person(string, int);
-
-void setName(string);
+Person();
 
 string getName();
 
-void setSalary(int);
+void setName(string);
 
 int getSalary();
+
+void setSalary(int);
 
 string toString();
 
