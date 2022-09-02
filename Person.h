@@ -1,11 +1,9 @@
 #include "Capybara.h"
 
-#include <sstream>
+class Person
 
-using namespace std;
+{
 
-class Person{   
-    
 private:
 
 string myName;
@@ -14,15 +12,16 @@ int salary;
 
 public:
 
-Person(int mySalary, string myName); // a name and salary must be provided to create a Person
+Person(string, int);
 
-void setName(string myName);         // change the Person's name
+void setName(string);
 
 string getName();
 
-void setSalary(int mySalary);        // change the Person's salary
+void setSalary(int);
 
 int getSalary();
 
-};
+string toString();
 
+};
