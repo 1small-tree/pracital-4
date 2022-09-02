@@ -1,22 +1,22 @@
 #include "Person.h"
 
-Person::Person(string name, int salary)
+Person::Person()
 
 {
 
-this->myName = name;
+this->myName = "?";
 
-this->salary = salary;
+this->salary = 0;
 
 }
 
-void Person::setName(string name){ this->myName = name; }
-
 string Person::getName(){ return this->myName; }
 
-void Person::setSalary(int salary){ this->salary = salary; }
+void Person::setName(string name){ this->myName = name; }
 
 int Person::getSalary(){ return this->salary; }
+
+void Person::setSalary(int salary){ this->salary = salary; }
 
 string Person::toString()
 
