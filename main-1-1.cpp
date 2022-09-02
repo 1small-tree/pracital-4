@@ -4,42 +4,46 @@ int main()
 
 {
 
-Person p1("test1",100),p2("test2",200),p3("test3",300),p4("test4",400);
+Capybara m1,m2,m3,m4;
 
-//before setting there pay be a garbage value in it...
+cout <<"before setting name: " << m1.getName() <<endl;
 
-cout << "before setting p1 " << p1.getName() <<" " << p1.getSalary() << endl;
+m1.setName("test");
 
-p1.setName("person1");
+cout <<"after setting name: " << m1.getName() <<endl;
 
-p1.setSalary(1000);
+cout <<"before setting age: " << m1.getAge() <<endl;
 
-cout << "after setting p1 " << p1.getName() <<" " << p1.getSalary() << endl;
+m1.setAge(23);
 
-cout << "before setting p2 " << p2.getName() <<" " << p2.getSalary() << endl;
+cout <<"after setting age: " << m1.getAge() <<endl;
 
-p2.setName("person2");
+//before setting there may be a garbage value in it...
 
-p2.setSalary(2200);
+cout << "before setting m2 " << m2.getName() <<" " << m2.getAge() << endl;
 
-cout << "after setting p2 " << p2.getName() <<" " << p2.getSalary() << endl;
+m2.setName("test2");
 
-cout << "before setting p3 " << p3.getName() <<" " << p3.getSalary()<< endl;
+m2.setAge(22);
 
-p3.setName("person3");
+cout << "after setting m2 " << m2.getName() <<" " << m2.getAge() << endl;
 
-p3.setSalary(2100);
+cout << "before setting m3 " << m3.getName() <<" " << m3.getAge() << endl;
 
-cout << "after setting p3 " << p3.getName() <<" " << p3.getSalary() << endl;
+m3.setName("test3");
 
-cout << "before setting p4 " << p4.getName() <<" " << p4.getSalary() << endl;
+m3.setAge(21);
 
-p4.setName("person4");
+cout << "after setting m3 " << m3.getName() <<" " << m3.getAge() << endl;
 
-p4.setSalary(3200);
+cout << "before setting m4 " << m4.getName() <<" " << m4.getAge() << endl;
 
-cout << "after setting p4 " << p4.getName() <<" " << p4.getSalary() << endl;
+m4.setName("test4");
 
-return 0;
+m4.setAge(32);
+
+cout << "after setting m4 " << m4.getName() <<" " << m4.getAge() << endl;
+
+return 1;
 
 }
