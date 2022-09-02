@@ -4,65 +4,41 @@ int main()
 
 {
 
-Capybara m1, m2, m3, m4;
+Person p1("test1",100),p2("test2",200),p3("test3",300),p4("test4",400);
 
-m1.setName("Jode");
+//before setting there pay be a garbage value in it...
 
-m1.setAge(23);
+cout << "before setting p1 " << p1.getName() <<" " << p1.getSalary() << endl;
 
-m2.setName("Alan");
+p1.setName("person1");
 
-m2.setAge(34);
+p1.setSalary(1000);
 
-m3.setName("Alice");
+cout << "after setting p1 " << p1.getName() <<" " << p1.getSalary() << endl;
 
-m3.setAge(19);
+cout << "before setting p2 " << p2.getName() <<" " << p2.getSalary() << endl;
 
-m4.setName("Capy");
+p2.setName("person2");
 
-m4.setAge(29);
+p2.setSalary(2200);
 
-Person p1("Harry", 4399);
+cout << "after setting p2 " << p2.getName() <<" " << p2.getSalary() << endl;
 
-Person p2("Naomi", 2300);
+cout << "before setting p3 " << p3.getName() <<" " << p3.getSalary()<< endl;
 
-Person p3("Paolo", 1900);
+p3.setName("person3");
 
-Person p4("Garry", 5300);
+p3.setSalary(2100);
 
-cout << endl << "*** DETAILS OF ALL MEERKATS ***\n-------------------------------" << endl;
+cout << "after setting p3 " << p3.getName() <<" " << p3.getSalary() << endl;
 
-cout << m1.toString() << endl;
+cout << "before setting p4 " << p4.getName() <<" " << p4.getSalary() << endl;
 
-cout << m2.toString() << endl;
+p4.setName("person4");
 
-cout << m3.toString() << endl;
+p4.setSalary(3200);
 
-cout << m4.toString() << endl;
-
-cout << endl << "*** DETAILS OF ALL PERSONS ***\n------------------------------" << endl;
-
-cout << p1.toString() << endl;
-
-cout << p2.toString() << endl;
-
-cout << p3.toString() << endl;
-
-cout << p4.toString() << endl << endl;
-
-cout << "Attempting to change details of Person p3 and p4 by using the setter methods..." << endl;
-
-p3.setName("Robert");
-
-p3.setSalary(5000);
-
-p4.setName("Hanna");
-
-p4.setSalary(3900);
-
-cout << p3.toString() << endl;
-
-cout << p4.toString() << endl << endl;
+cout << "after setting p4 " << p4.getName() <<" " << p4.getSalary() << endl;
 
 return 0;
 
